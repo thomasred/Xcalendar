@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/date"
+         
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="26sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ff000000"
+        android:text="日期 :2013/12/25 Wed">
+    </TextView>
+    
+    <RelativeLayout
+        android:id="@+id/option_2"
+         
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:layout_centerHorizontal="true">
+    	<RadioGroup
+            android:id="@+id/option_1"
+        	android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"
+        	android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/timech1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="時間"
+            android:textSize="26sp" />
+        
+        <RadioButton 
+            android:id="@+id/timech2"
+            android:layout_height="wrap_content"
+        	android:layout_width="wrap_content"
+        	android:textSize="26sp"
+        	android:checked="true" 
+        	android:text="現在~"/>
+    </RadioGroup>
+    <EditText
+        android:id="@+id/hour"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/option_1"
+        android:inputType="number"
+        android:maxLength = "2"
+        android:hint="11">
+    </EditText>
+    <EditText
+        android:id="@+id/min"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/hour"
+        android:layout_alignBottom="@+id/hour"
+        android:inputType="time"
+        android:maxLength = "2"
+        android:hint="00">
+    </EditText>
+    <TextView
+        android:id="@+id/sign"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="30sp"
+        android:layout_toRightOf="@+id/min"
+        android:layout_alignBottom="@+id/hour"
+        android:text="~">
+    </TextView>
+    <EditText
+        android:id="@+id/af_hour"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/sign"
+        android:layout_alignBottom="@+id/hour"
+        android:inputType="number"
+        android:maxLength = "2"
+        android:hint="13">
+    </EditText>
+    <EditText
+        android:id="@+id/af_min"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/af_hour"
+        android:layout_alignBottom="@+id/af_hour"
+        android:inputType="number"
+        android:maxLength = "2"
+        android:hint="00">
+    </EditText>
+    <EditText
+        android:id="@+id/hr"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/option_1"
+        android:layout_alignBottom="@+id/option_1"
+        android:inputType="number"
+        android:maxLength = "1"
+        android:text="1">
+    </EditText>
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/hr"
+        android:layout_alignBottom="@+id/option_1"
+        android:textSize="26sp"
+        android:textColor="#ff000000"
+        android:text="小時後">
+    </TextView>
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/Event"
+         
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="26sp"
+        android:layout_below="@+id/option_2"
+        android:layout_alignLeft="@+id/date"
+        android:layout_marginTop="15dp"
+        android:textColor="#ff000000"
+        android:text="事件:">
+    </TextView>
+    <EditText
+        android:id="@+id/event"
+        
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/Event"
+        android:layout_alignBottom="@+id/Event"
+        android:layout_marginTop="15dp"
+        android:textSize="22sp"
+        android:text="Meeting">
+    </EditText>
+    <CheckBox
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="#a00"
+        android:layout_below="@+id/Event"
+        android:layout_alignLeft="@+id/date"
+        android:text="私密">
+    </CheckBox>
+    <TextView
+        android:id="@+id/Ps"
+         
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="26sp"
+        android:layout_below="@+id/check"
+        android:layout_alignLeft="@+id/date"
+        android:textColor="#ff000000"
+        android:text="備註:">
+    </TextView>
+    <EditText
+        android:id="@+id/ps"
+         
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/check"
+        android:layout_toRightOf="@+id/Ps"
+        android:textSize="22sp"
+        android:hint="哈...~事件內容~...哈">
+    </EditText>
+
+    <Button
+        android:id="@+id/confirm"
+        android:background="#a0444444" 
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ps"
+        android:layout_centerHorizontal="true"
+        android:text="確認" />
+
+    <Button
+        android:id="@+id/back"
+        android:background="#a0444444" 
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirm"
+        android:layout_centerHorizontal="true"
+        android:text="返回" />
+
+</RelativeLayout>

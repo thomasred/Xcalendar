@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <TextView
+        android:id="@+id/LCD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="26sp"
+        android:text="LCD : " />
+    
+    <RelativeLayout
+        android:id="@+id/opt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LCD"
+        android:layout_centerHorizontal="true">
+    	<RadioGroup
+            android:id="@+id/RG"
+        	android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"
+        	android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/t_ch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自訂"
+            android:textSize="26sp" />
+        
+        <RadioButton 
+            android:id="@+id/t_ch2"
+            android:layout_height="wrap_content"
+        	android:layout_width="wrap_content"
+        	android:textSize="26sp"
+        	android:checked="true" 
+        	android:text="現在~"/>
+    </RadioGroup>
+    <EditText
+        android:id="@+id/hour2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/RG"
+        android:inputType="number"
+        android:maxLength = "2"
+        android:hint="11">
+    </EditText>
+    <EditText
+        android:id="@+id/min2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/hour2"
+        android:layout_alignBottom="@+id/hour2"
+        android:inputType="time"
+        android:maxLength = "2"
+        android:hint="00">
+    </EditText>
+    <TextView
+        android:id="@+id/sign2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="30sp"
+        android:layout_toRightOf="@+id/min2"
+        android:layout_alignBottom="@+id/hour2"
+        android:text="~">
+    </TextView>
+    <EditText
+        android:id="@+id/af_hour2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/sign2"
+        android:layout_alignBottom="@+id/hour2"
+        android:inputType="number"
+        android:maxLength = "2"
+        android:hint="13">
+    </EditText>
+    <EditText
+        android:id="@+id/af_min2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/af_hour2"
+        android:layout_alignBottom="@+id/af_hour2"
+        android:inputType="number"
+        android:maxLength = "2"
+        android:hint="00">
+    </EditText>
+    <EditText
+        android:id="@+id/hr"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/RG"
+        android:layout_alignBottom="@+id/RG"
+        android:inputType="number"
+        android:maxLength = "1"
+        android:text="1">
+    </EditText>
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/hr"
+        android:layout_alignBottom="@+id/RG"
+        android:textSize="26sp"
+        android:textColor="#ff000000"
+        android:text="小時後">
+    </TextView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt3"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/opt"
+        android:layout_alignLeft="@+id/opt"
+        android:textSize="26sp"
+        android:textColor="#ff000000"
+        android:text=" 事件 : ">
+    </TextView>
+    <EditText
+        android:id="@+id/event2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/txt3"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/opt"
+        android:textSize="22sp"
+        android:text="外出中">
+    </EditText>
+    
+    <Spinner  
+        android:id="@+id/list"
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content"
+    	android:layout_below="@+id/txt3"
+        android:layout_alignLeft="@+id/opt"/>
+    
+    <Button
+        android:id="@+id/confirm2"
+        android:background="#a0444444" 
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list"
+        android:layout_centerHorizontal="true"
+        android:text="確認" />
+
+    <Button
+        android:id="@+id/back2"
+        android:background="#a0444444" 
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirm2"
+        android:layout_centerHorizontal="true"
+        android:text="返回" />
+
+    
+
+</RelativeLayout>
