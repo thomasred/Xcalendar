@@ -1,2 +1,4 @@
 # Xcalendar
 Google calendar api and doorplate control
+System description :
+由於學生要找教授時常常會有找不到的情況部分教授在互相尋找時也會有相同的情況，因此我們製作了這個專案，使用8051板作為門牌擷取行事曆的公開資訊告知訪客老師的目前是否外出或是在哪開會等等，利用Google Calendar Api我們實現了電腦與手機板的行事曆操作，使用者可以透過手機或電腦操作行事曆，若臨時外出手機也實現了讓教授直接控制門牌訊息的功能。
